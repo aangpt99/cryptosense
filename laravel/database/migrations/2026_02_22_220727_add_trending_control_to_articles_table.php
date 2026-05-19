@@ -11,10 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('articles', function (Blueprint $table) {
-            $table->boolean('is_pinned')->default(false);
-            $table->boolean('hidden_from_trending')->default(false);
-        });
+        //
     }
 
     /**
@@ -22,8 +19,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('articles', function (Blueprint $table) {
-            $table->dropColumn(['is_pinned', 'hidden_from_trending']);
-        });
+        //
     }
 };
