@@ -1,0 +1,946 @@
+/* NAV MENU LINK DI INDEX */
+.nav-menu .nav-link-menu {
+  font-weight: 600;
+  font-size: .95rem;
+  text-decoration: none;
+  color: #374151;
+  padding: 6px 8px;
+  border-radius: 6px;
+  transition: .2s;
+}
+.nav-menu .nav-link-menu:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+.nav-menu .nav-link-menu.active {
+  background: #111827;
+  color: #fff;
+}
+
+/* =========================================
+   GLOBAL
+========================================= */
+body {
+  background: linear-gradient(to bottom, #f9fafb, #e5e7eb, #d1d5db) !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #212529;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+nav.navbar {
+  position: relative;
+  z-index: 100;
+  background: #ffffffdd !important;
+  border-bottom: 1px solid #e5e7eb !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding-top: 12px;
+  padding-bottom: 12px;
+  transition: .25s ease;
+}
+
+nav.navbar .navbar-brand {
+  font-weight: 700;
+  color: #111827 !important;
+  letter-spacing: .3px;
+  font-size: 1.1rem;
+  transition: .25s ease;
+}
+
+nav.navbar .navbar-brand:hover {
+  opacity: .85;
+}
+
+/* NAV MENU */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* NAV LINKS */
+.nav-link-menu {
+  font-weight: 600;
+  font-size: .93rem;
+  text-decoration: none;
+  color: #4b5563;
+  padding: 8px 12px;
+  border-radius: 10px;
+  transition: .25s ease;
+}
+
+.nav-link-menu:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.nav-link-menu.active {
+  background: #111827;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(15,23,42,.12);
+}
+
+/* LOGIN BUTTON */
+.login-btn {
+  font-weight: 600;
+  font-size: .93rem;
+  text-decoration: none;
+  color: #4b5563;
+  padding: 8px 12px;
+  border-radius: 10px;
+  transition: .25s ease;
+  background: transparent;
+  border: none;
+}
+
+.login-btn:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.login-btn.active {
+  background: #111827;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(15,23,42,.12);
+}
+
+/* DROPDOWN MENU */
+.dropdown-menu {
+  min-width: 180px;
+  padding: 8px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.95);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  box-shadow:
+    0 12px 28px rgba(15,23,42,.12),
+    0 2px 6px rgba(15,23,42,.06);
+
+  overflow: hidden;
+  z-index: 9999 !important;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+
+  padding: 10px 14px;
+  border-radius: 12px;
+
+  font-size: .88rem;
+  font-weight: 600;
+
+  color: #111827 !important;
+  text-decoration: none;
+
+  transition: .2s ease;
+}
+
+.dropdown-item:hover {
+  background: #f3f4f6;
+  color: #111827 !important;
+
+  transform: translateX(2px);
+}
+
+
+/* =========================================
+   MENU ATAS (Distribusi / Chart / Trending)
+========================================= */
+
+.menu-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  margin-top: -5px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.menu-card {
+  width: 200px;
+  height: 140px;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  transition: .25s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 7px rgba(15,23,42,0.08);
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 26px rgba(15,23,42,0.12);
+  border-color: #d1d5db;
+}
+
+.menu-card img {
+  width: 40px;
+  opacity: .85;
+}
+
+.menu-card span {
+  font-weight: 600;
+  font-size: .9rem;
+  color: #1f2937;
+}
+
+
+/* =========================================
+   COIN TICKER
+========================================= */
+
+.coin-ticker {
+  z-index: 1;
+  width: 100%;
+  overflow: hidden;
+  background: rgba(255,255,255,0.25);
+  padding: 10px 0;
+  margin: 0 2px 25px;
+  position: relative;
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  box-shadow:
+    inset 0 1px rgba(255,255,255,.35),
+    inset 0 -1px rgba(15,23,42,.04);
+}
+
+.coin-ticker::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
+
+  background: linear-gradient(
+    to right,
+    #f3f4f6 0%,
+    rgba(243,244,246,0.98) 18%,
+    rgba(243,244,246,0.92) 35%,
+    rgba(243,244,246,0.75) 55%,
+    rgba(243,244,246,0.35) 78%,
+    rgba(243,244,246,0) 100%
+  );
+}
+
+.coin-ticker::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
+
+  background: linear-gradient(
+    to left,
+    #f3f4f6 0%,
+    rgba(243,244,246,0.98) 18%,
+    rgba(243,244,246,0.92) 35%,
+    rgba(243,244,246,0.75) 55%,
+    rgba(243,244,246,0.35) 78%,
+    rgba(243,244,246,0) 100%
+  );
+}
+
+.coin-track {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+  animation: scrollTicker 25s linear infinite;
+  will-change: transform;
+}
+
+.coin-ticker:hover .coin-track {
+  animation-play-state: paused;
+}
+
+@keyframes scrollTicker {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.coin {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(255,255,255,0.88);
+  border-radius: 20px;
+  box-shadow: 0 4px 14px rgba(15,23,42,0.06);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: .25s ease;
+  flex: 0 0 auto;
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.coin:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(15,23,42,0.18);
+  border-color: #d1d5db;
+}
+
+.coin-logo {
+  width: 24px;
+  height: 24px;
+}
+
+.coin-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.coin-symbol {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.coin-sentiment.Positive { color: #16a34a !important; }
+.coin-sentiment.Negative { color: #dc2626 !important; }
+.coin-sentiment.Neutral  { color: #6b7280 !important; }
+
+
+/* =========================================
+   HIGHLIGHT NEWS
+========================================= */
+
+.highlight-wrapper {
+  position: relative;
+  margin: 10px 0 2.2rem;
+}
+
+.highlight-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 0.75rem;
+  padding: 0.5rem 0rem;
+  scroll-behavior: smooth;
+}
+
+.highlight-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.highlight-card {
+  min-width: 160px;
+  max-width: 190px;
+  flex: 0 0 auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  animation: fadeInUp .5s ease;
+  transition: .2s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(15,23,42,0.15);
+  border-color: #d1d5db;
+}
+
+.card-img-top {
+  height: 80px;
+  object-fit: cover;
+}
+
+.highlight-card .card-body {
+  padding: .55rem .65rem .75rem;
+}
+
+.title-truncate-2 {
+  font-size: .8rem;
+  line-height: 1.25;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: .25rem 0;
+}
+
+.text-compact {
+  font-size: .72rem;
+  color: #6b7280;
+}
+
+.scroll-btn {
+  position: absolute;
+
+  top: 50%;
+  margin-top: -17px;
+
+  width: 34px;
+  height: 34px;
+
+  background: #ffffff;
+  border: 1px solid #e5e7eb;   /* tambahin ini */
+  border-radius: 50%;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12); /* soften shadow */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  transition: opacity .2s ease;
+
+  z-index: 20;
+}
+.highlight-wrapper:hover .scroll-btn {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.scroll-btn:hover {
+  transform: none !important;
+}
+
+.scroll-btn.left  { left: -19px; }
+.scroll-btn.right { right: -19px; }
+
+
+/* =========================================
+   NEWS CARDS (Trending / Coin News)
+========================================= */
+
+#news-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+@media (max-width: 992px) {
+  #news-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  #news-list {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+}
+
+.news-card {
+  flex: 1 1 calc(33.333% - 1rem);
+  min-width: 220px;
+  max-width: 290px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  animation: fadeInUp .5s ease;
+  transition: .25s ease;
+  box-shadow: 0 2px 6px rgba(15,23,42,.06);
+  cursor: pointer;
+}
+
+.news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(15,23,42,0.18);
+  border-color: #d1d5db;
+}
+
+.news-card img {
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.news-card .card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: .8rem .85rem 1rem;
+}
+
+/* badge sentiment di kartu berita */
+.sentiment-badge {
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: .78rem;
+  font-weight: 600;
+  display: inline-block;
+  text-transform: capitalize;
+}
+
+.sentiment-positive { background:#e8f5e9; color:#16a34a; }
+.sentiment-negative { background:#fdecea; color:#dc2626; }
+.sentiment-neutral  { background:#f3f4f6; color:#6b7280; }
+
+
+/* =========================================
+   OLD COIN SUMMARY LIST (Tetap disimpan)
+========================================= */
+
+.coin-summary-list {
+  margin-top: 25px; 
+}
+
+.coin-summary-card {
+  background: #e9ecef;
+  padding: 18px 22px;
+  border-radius: 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.coin-summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.coin-summary-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.coin-summary-logo {
+  width: 42px;
+  height: 42px;
+}
+
+.coin-summary-name {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.coin-summary-symbol {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.coin-summary-right {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.coin-summary-right.Positive { color: #16a34a; }
+.coin-summary-right.Negative { color: #dc2626; }
+.coin-summary-right.Neutral  { color: #6b7280; }
+
+.coin-summary-details {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+}
+
+.pos { color: #16a34a; font-weight: 700; }
+.neg { color: #dc2626; font-weight: 700; }
+.neu { color: #6b7280; font-weight: 700; }
+
+
+/* =========================================
+   NEW PREMIUM COIN SUMMARY GRID
+========================================= */
+
+.coin-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-top: 35px;
+  margin-bottom: 40px;
+}
+
+/* CARD BASE */
+.coin-summary-grid .coin-summary-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 20px 18px 16px;
+  box-shadow: 0 6px 18px rgba(15,23,42,0.08);
+  transition: .25s ease;
+  overflow: hidden;
+}
+
+/* DEFAULT HOVER */
+.coin-summary-grid .coin-summary-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(15,23,42,0.16);
+}
+
+/* =========================
+   🔥 OVERLAY LAYER (KUNCI UTAMA)
+========================= */
+.coin-summary-grid .coin-summary-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  z-index: 1;
+  opacity: 0;
+  transition: .25s ease;
+}
+
+/* BIAR ISI TETAP DI ATAS */
+.coin-summary-grid .coin-summary-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================
+   SENTIMENT HOVER
+========================= */
+
+/* POSITIVE */
+.coin-summary-grid .coin-summary-card.positive:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 200, 0, 0.25);
+}
+
+.coin-summary-grid .coin-summary-card.positive:hover::before {
+  background: rgba(0, 255, 0, 0.12);
+  opacity: 1;
+}
+
+/* NEGATIVE */
+.coin-summary-grid .coin-summary-card.negative:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(255, 0, 0, 0.25);
+}
+
+.coin-summary-grid .coin-summary-card.negative:hover::before {
+  background: rgba(255, 0, 0, 0.12);
+  opacity: 1;
+}
+
+/* NEUTRAL */
+.coin-summary-grid .coin-summary-card.neutral:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 14px rgba(15,23,42,0.06);
+}
+/* badge trend */
+
+.trend-badge {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  left: auto;
+  transform: none;
+
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 10px rgba(15,23,42,0.25);
+  color: #f9fafb;
+}
+
+.trend-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: #e5e7eb;
+}
+
+.trend-text {
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+.trend-positive { background: #16a34a; }
+.trend-positive .trend-dot { background: #bbf7d0; }
+
+.trend-negative { background: #dc2626; }
+.trend-negative .trend-dot { background: #fecaca; }
+
+.trend-neutral { background: #4b5563; }
+.trend-neutral .trend-dot { background: #e5e7eb; }
+
+/* header card */
+.coin-summary-grid .coin-summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.coin-summary-grid .coin-summary-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.coin-summary-grid .coin-summary-logo {
+  width: 34px;
+  height: 34px;
+}
+
+.coin-summary-grid .coin-summary-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.coin-summary-sub {
+  font-size: 0.78rem;
+  color: #6b7280;
+}
+
+/* nilai utama */
+.coin-summary-grid .coin-summary-right {
+  font-weight: 700;
+  font-size: 0.95rem;
+  min-width: 50px;
+  text-align: right;
+}
+
+.coin-summary-grid .coin-summary-right.Positive { color: #16a34a; }
+.coin-summary-grid .coin-summary-right.Negative { color: #dc2626; }
+.coin-summary-grid .coin-summary-right.Neutral  { color: #4b5563; }
+
+/* details bawah */
+.coin-summary-grid .coin-summary-details {
+  margin-top: 14px;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 992px) {
+  .coin-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .coin-summary-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+/* =========================================
+   FIX: OVERRIDE CARD LAMA UNTUK MENGHINDARI KONFLIK
+========================================= */
+
+.coin-summary-list .coin-summary-card {
+  background: #e9ecef;
+}
+
+.coin-summary-grid .coin-summary-card {
+  background: #ffffff !important;
+  padding: 14px 14px 12px !important;
+  border-radius: 16px !important;
+  margin-bottom: 0 !important;
+  box-shadow: 0 6px 18px rgba(15,23,42,0.08) !important;
+}
+
+
+/* =========================================
+   BACK BUTTON (GLOBAL)
+========================================= */
+
+.back-btn {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: .9rem;
+  color: #333;
+  text-decoration: none;
+  transition: .25s ease;
+}
+.back-btn:hover {
+  background: #eee;
+}
+
+
+/* =========================================
+   DISTRIBUTION PAGE (PIE CHART)
+========================================= */
+
+.dist-card {
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:14px;
+  padding:20px;
+  text-align:center;
+  box-shadow:0 2px 10px rgba(0,0,0,.05);
+  transition:.25s ease;
+}
+.dist-card:hover {
+  transform:translateY(-3px);
+  box-shadow:0 6px 16px rgba(0,0,0,.1);
+}
+.dist-value {
+  font-size:1.8rem;
+  font-weight:700;
+  margin-bottom:4px;
+}
+
+#chart-wrapper {
+  max-width: 480px;
+  margin: 0 auto;
+}
+#pieChart {
+  width:100% !important;
+  height:auto !important;
+}
+.dist-chart-card {
+  border-radius:16px;
+}
+
+
+/* =========================================
+   CHART PAGE (LINE CHART)
+========================================= */
+
+.chart-page .coin-ticker.chart-ticker {
+  height:44px;
+  display:flex;
+  align-items:center;
+}
+
+.chart-page .coin-ticker.chart-ticker .coin-track {
+  display:flex;
+  align-items:center;
+  gap:20px;
+  animation:scrollTicker 22s linear infinite;
+}
+
+.chart-page .coin-ticker.chart-ticker .coin {
+  transform: scale(0.78);
+  box-shadow:0 1px 3px rgba(0,0,0,0.05);
+}
+.chart-page .coin-ticker.chart-ticker .coin:hover {
+  transform:scale(0.82);
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+.page-header {
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:8px;
+}
+
+.chart-card {
+  background:#fff;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.06);
+  margin-top:25px;
+  max-width:900px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#sentimentChart {
+  height:300px !important;
+}
+
+/* FILTER BUTTONS (chart) */
+.filter-btns button {
+  border:1px solid #ddd;
+  background:#fff;
+  padding:6px 14px;
+  border-radius:10px;
+  cursor:pointer;
+  transition:.25s ease;
+}
+.filter-btns button.active {
+  background:#2563eb;
+  color:#fff;
+  border-color:#2563eb;
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }  
+}
+
+/* ===== FINAL POLISH ===== */
+
+/* soften summary card */
+.coin-summary-grid .coin-summary-card {
+  box-shadow: 0 4px 14px rgba(15,23,42,0.06);
+}
+
+/* lebih subtle badge */
+.trend-badge {
+  padding: 5px 12px;
+  font-size: 0.72rem;
+}
+
+/* rapikan jarak grid */
+.coin-summary-grid {
+  gap: 28px;
+}
+
+/* haluskan score */
+.coin-summary-right {
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+
+/* ticker spacing */
+.coin-track {
+  gap: 24px;
+}
+
+/* sedikit rounded lebih premium */
+.highlight-card,
+.coin-summary-card {
+  border-radius: 18px;
+}
